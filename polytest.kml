@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Тестовый полигон.kml</name>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f00ffff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>4cffaaaa</color>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f00ffff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>4cffaaaa</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Тестовый полигон</name>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						54.0397222222222,88.7325 54.0361111111111,88.73555556 54.0330555555556,88.74 54.03,88.74638889 54.0272222222222,88.74805556 54.0197222222222,88.75194444 54.0163888888889,88.75555556 54.0125,88.75638889 54.0125,88.75722222 54.0144444444444,88.76166667 54.0166666666667,88.76861111 54.0186111111111,88.77361111 54.0216666666667,88.77666667 54.0275,88.78472222 54.0325,88.79694444 54.0333333333333,88.80194444 54.0391666666667,88.80638889 54.0391666666667,88.80694444 54.0383333333333,88.80777778 54.0380555555556,88.81194444 54.0391666666667,88.81805556 54.0402777777778,88.81888889 54.0402777777778,88.82 54.0394444444444,88.82 54.0411111111111,88.82638889 54.0388888888889,88.8275 54.0377777777778,88.82277778 54.0369444444444,88.81333333 54.0352777777778,88.81083333 54.0347222222222,88.8075 54.0319444444444,88.80305556 54.0308333333333,88.79638889 54.0280555555556,88.79222222 54.0225,88.78416667 54.0172222222222,88.77638889 54.0133333333333,88.77138889 54.0119444444444,88.76388889 54.0108333333333,88.75583333 54.0102777777778,88.75555556 54.0105555555556,88.75444444 54.0125,88.75388889 54.0161111111111,88.75388889 54.0194444444444,88.74888889 54.0266666666667,88.745 54.0294444444444,88.74305556 54.0325,88.73805556 54.0347222222222,88.73444444 54.0394444444444,88.73055556
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>
