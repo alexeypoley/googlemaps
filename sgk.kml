@@ -32,7 +32,7 @@
 	</Style>
 	<Placemark>
 		<name>СГК</name>
-		<description><![CDATA[<img src=""/><img src="https://ooosgk.com/attachments/Logo/SGK-logo.JPG"/>]]></description>
+		<description><![CDATA[<img src=""/><img src="http://github.com/alexeypoley/googlemaps/blob/master/SGK-logo.JPG?raw=true"/>]]></description>
 		<Camera>
 			<gx:TimeStamp><when>2016-12-31</when>
 </gx:TimeStamp>
