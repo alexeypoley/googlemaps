@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
-	<name>СГК.kml</name>
+	<name>sgk.kml</name>
 	<StyleMap id="m_ylw-pushpin">
 		<Pair>
 			<key>normal</key>
-			<styleUrl>#s_ylw-pushpin0</styleUrl>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
 		</Pair>
 		<Pair>
 			<key>highlight</key>
@@ -14,45 +14,48 @@
 	</StyleMap>
 	<Style id="s_ylw-pushpin_hl">
 		<IconStyle>
-			<scale>1.3</scale>
+			<scale>1.4</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ranger_station.png</href>
 			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
+		<ListStyle>
+		</ListStyle>
 	</Style>
-	<Style id="s_ylw-pushpin0">
+	<Style id="s_ylw-pushpin">
 		<IconStyle>
-			<scale>1.1</scale>
+			<scale>1.2</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ranger_station.png</href>
 			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
+		<ListStyle>
+		</ListStyle>
 	</Style>
 	<Placemark>
-		<name>СГК</name>
-		<description><![CDATA[<img src=""/><img src="http://github.com/alexeypoley/googlemaps/blob/master/SGK-logo.JPG?raw=true"/>]]></description>
+		<name>ООО &quot;Сибирская горная компания&quot;</name>
 		<Camera>
-			<gx:TimeStamp><when>2016-12-31</when>
+			<gx:TimeStamp><when>2013-12-31</when>
 </gx:TimeStamp>
 			<gx:ViewerOptions>
 				<gx:option name="historicalimagery"></gx:option>
 				<gx:option enabled="0" name="sunlight"></gx:option>
 				<gx:option enabled="0" name="streetview"></gx:option>
 			</gx:ViewerOptions>
-			<longitude>90.03958476470652</longitude>
-			<latitude>54.59469661711818</latitude>
-			<altitude>37216.14645998113</altitude>
-			<heading>16.47524612945921</heading>
-			<tilt>1.493076728100983</tilt>
-			<roll>19.63540021597231</roll>
+			<longitude>89.93786962969602</longitude>
+			<latitude>54.50822862485291</latitude>
+			<altitude>7732.910004667022</altitude>
+			<heading>1.274689264482834</heading>
+			<tilt>3.45725936105644</tilt>
+			<roll>1.345961427311235</roll>
 			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
 		</Camera>
 		<styleUrl>#m_ylw-pushpin</styleUrl>
 		<Point>
 			<gx:drawOrder>1</gx:drawOrder>
-			<coordinates>89.94437554372203,54.50884239922954,0</coordinates>
+			<coordinates>89.93948907815566,54.50804051468425,0</coordinates>
 		</Point>
 	</Placemark>
 </Document>
