@@ -45,7 +45,7 @@
 		</PolyStyle>
 	</Style>
 	<Placemark>
-		<name>р.Березовая, р.Шатай.</name>
+		<name>р.Березовая</name>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
 		<Polygon>
 			<tessellate>1</tessellate>
