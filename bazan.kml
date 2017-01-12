@@ -8,7 +8,7 @@
 			<Icon>
 				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
 			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			<hotSpot x="20" y="1" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
 			<color>cc00ffff</color>
