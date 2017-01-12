@@ -31,7 +31,7 @@
 		</IconStyle>
 	</Style>
 	<Placemark>
-		<name>Тисуль-С.Кундат</name>
+		<name>Тисуль-С.Кундат 95 км</name>
 		<styleUrl>#m_ylw-pushpin</styleUrl>
 		<LineString>
 			<tessellate>1</tessellate>
