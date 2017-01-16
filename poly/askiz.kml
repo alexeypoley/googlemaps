@@ -26,7 +26,6 @@
 		</LineStyle>
 		<PolyStyle>
 			<color>19ff0000</color>
-			<colorMode>random</colorMode>
 		</PolyStyle>
 	</Style>
 	<Style id="sn_ylw-pushpin">
@@ -43,13 +42,11 @@
 		</LineStyle>
 		<PolyStyle>
 			<color>19ff0000</color>
-			<colorMode>random</colorMode>
 		</PolyStyle>
 	</Style>
 	<Placemark>
-		<name>Постановление от 21 октября 2016 г. № 508</name>
+		<name>Постановление от 21 октября 2016 г. № 508(Аскизский район)</name>
 		<description>Постановление от 21 октября 2016 г. № 508
-
 Территория традиционного природопользхования коренными малочисленными народами
 Аскизский район, участок площадью 195,540 тыс. га</description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
