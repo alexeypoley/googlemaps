@@ -25,7 +25,7 @@
 
 
 	<Placemark>
-      <name>Blue Line</name>
+      <name>Аскизский район</name>
       <styleUrl>#blueLine</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
@@ -140,7 +140,7 @@
     </Placemark>
 
     <Placemark>
-      <name>Red Line</name>
+      <name>Таштыпский район</name>
       <styleUrl>#redLine</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
