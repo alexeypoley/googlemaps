@@ -12,14 +12,14 @@
     <Style id="blueLine">
       <LineStyle>
         <color>ffff0000</color>
-        <width>4</width>
+        <width>1</width>
       </LineStyle>
     </Style>
-    
+
     <Style id="redLine">
       <LineStyle>
-        <color>ff0000ff</color>
-        <width>4</width>
+        <color>ffff0000/color>
+        <width>1</width>
       </LineStyle>
     </Style>
 
