@@ -23,46 +23,46 @@
     <Style id="road001">
       <LineStyle>
         <color>ff00ffff</color>
-        <width>1</width>
+        <width>1.5</width>
       </LineStyle>
     </Style>
 
     <Style id="road002">
       <LineStyle>
         <color>ff00ffff</color>
-        <width>1</width>
+        <width>1.5</width>
       </LineStyle>
     </Style>
     <Style id="road003">
       <LineStyle>
         <color>ff00ffff</color>
-        <width>1</width>
+        <width>1.5</width>
       </LineStyle>
     </Style>
 
     <Style id="road004">
       <LineStyle>
         <color>ff00ffff</color>
-        <width>1</width>
+        <width>1.5</width>
       </LineStyle>
     </Style>
         <Style id="road005">
       <LineStyle>
         <color>ff00ffff</color>
-        <width>1</width>
+        <width>1.5</width>
       </LineStyle>
     </Style>
 
     <Style id="road006">
       <LineStyle>
         <color>ff00ffff</color>
-        <width>1</width>
+        <width>1.5</width>
       </LineStyle>
     </Style>
         <Style id="road007">
       <LineStyle>
         <color>ff00ffff</color>
-        <width>1</width>
+        <width>1.5</width>
       </LineStyle>
     </Style>
 
