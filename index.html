@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Золотой полюс - Лицензии<code>setTimeout()</code></title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+#floating-panel2 {
+  position: absolute;
+  top: 10px;
+  left: 360px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+#floating-panel3 {
+  position: absolute;
+  top: 10px;
+  left: 504px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#floating-panel {
+                  margin-left: -52px;
+                }
+#floating-panel2 {
+                  margin-left: -52px;
+                }
+#floating-panel3 {
+                  margin-left: -52px;
+                }
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <button id="drop" onclick="drop1()">Кемеровская область</button>
+     </div>
+     <div id="floating-panel2">
+      <button id="drop" onclick="drop2()">Иркутская область</button>
+     </div>
+      <div id="floating-panel3">
+      <button id="drop" onclick="drop3()">Остальные</button>
+     </div>
+    <div id="map"></div>
+    <script>
+
+var neighborhoods = [
+{lat: 54.0394444444444, lng: 88.7305555555556}, //Лицензия  КЕМ 00527БР (р.Березовая)
+{lat: 54.2227777777778, lng: 88.9497222222222}, //Лицензия  КЕМ 01633БР (р.Верхняя Уса)
+{lat: 54.2558333333333, lng: 89.0230555555556}, //Лицензия  КЕМ 01633БР Собака
+{lat: 55.1797222222222, lng: 87.7661111111111}, //Лицензия  КЕМ 01762БЭ (р.Северный Кундат)
+{lat: 55.1622222222222, lng: 88.0936111111111}, //Лицензия  КЕМ 01869БР (р.Талановая)
+
+];
+
+var neighborhoods2 = [
+{lat: 58.721389, lng: 116.559167}, //Верхний Имянет Лицензия ИРК 03006 БЭ
+{lat: 58.7275, lng: 116.870278}, // Лицензия ИРК 03007 БЭ
+{lat: 58.072222, lng: 113.483333},// Лицензия ИРК 03016 БР
+{lat: 58.6641666666667, lng: 117.056388888889}, //Лицензия ИРК 03248БР (р.Кульбарахун)
+{lat: 58.7338888888889, lng: 116.809444444444} //Лицензия ИРК 03330БР (руч. Березовый)
+
+];
+var neighborhoods3 = [
+{lat: 54.9722222222222, lng: 113.275277777778},  //Лицензия УДЭ -1715БР (Иннокентьевский)
+{lat: 52.2326444444444, lng: 88.035175} //Лицензия ГОА 00447БЭ (р.Албас)
+
+];
+
+var markers = [];
+var InfoWindow = [];
+var historicalOverlay;
+var markerMzk;
+var markerShira;
+
+
+
+var map;
+var chicago = {lat: 56.151362, lng: 101.634080};
+function CenterControl(controlDiv, map) {
+
+  // Set CSS for the control border.
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = '#fff';
+  controlUI.style.border = '2px solid #fff';
+  controlUI.style.borderRadius = '3px';
+  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.marginBottom = '22px';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to recenter the map';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior.
+  var controlText = document.createElement('div');
+  controlText.style.color = 'rgb(25,25,25)';
+  controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+  controlText.style.fontSize = '16px';
+  controlText.style.lineHeight = '38px';
+  controlText.style.paddingLeft = '5px';
+  controlText.style.paddingRight = '5px';
+  controlText.innerHTML = 'В центр';
+  controlUI.appendChild(controlText);
+
+  // Setup the click event listeners: simply set the map to Chicago.
+  controlUI.addEventListener('click', function() {
+    map.setCenter(chicago);
+  });
+
+}
+//#############
+
+function initMap() {
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 5,
+    center: {lat: 56.151362, lng: 101.634080},
+    // center: {lat: 56.151362, lng: 101.634080},
+    
+  });
+
+ // Create the DIV to hold the control and call the CenterControl() constructor
+  // passing in this DIV.
+  var centerControlDiv = document.createElement('div');
+  var centerControl = new CenterControl(centerControlDiv, map);
+
+  centerControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+
+
+
+//Дороги
+var ctaLayer1 = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/road_010.kml',   
+    map: map
+  });
+
+//Золотой полюс
+var ctaLayer2 = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/gold.kml',   
+    map: map
+  });
+
+//Сибирская горная
+var ctaLayer3 = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/sgk2.kml',
+    map: map
+  });
+
+//Лицензии
+var ctaLayer4 = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/b007.kml',
+    map: map
+  });
+
+//охотничьи угодья
+var layerrrr = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/zoone4.kml',
+    map: map
+  });
+
+//База Бодайбо
+var ctaLayer6 = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/cat.kml',
+    map: map
+  });
+
+
+//зона загрузки страницы
+var ctaLayer7 = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/zone2.kml',
+    map: map
+  });
+
+
+
+
+
+
+var bazanCoords = [ //Договор аренды Базан
+{lat: 54.2266666666667, lng: 88.9338888888889},  // point #1
+{lat: 54.2269444444444, lng: 88.9336111111111},  // point #2
+{lat: 54.2283333333333, lng: 88.9372222222222},  // point #3
+{lat: 54.2313888888889, lng: 88.94},  // point #4
+{lat: 54.2308333333333, lng: 88.9536111111111},  // point #5
+{lat: 54.2305555555556, lng: 88.955},  // point #6
+{lat: 54.2305555555556, lng: 88.9577777777778},  // point #7
+{lat: 54.2294444444444, lng: 88.9613888888889},  // point #8
+{lat: 54.2269444444444, lng: 88.9580555555556},  // point #9
+{lat: 54.2241666666667, lng: 88.9591666666667},  // point #10
+{lat: 54.2219444444444, lng: 88.9611111111111},  // point #11
+{lat: 54.2166666666667, lng: 88.9583333333333},  // point #12
+{lat: 54.2158333333333, lng: 88.9583333333333},  // point #13
+{lat: 54.2138888888889, lng: 88.9602777777778},  // point #14
+{lat: 54.2136111111111, lng: 88.9630555555556},  // point #15
+{lat: 54.2116666666667, lng: 88.965},  // point #16
+{lat: 54.2088888888889, lng: 88.9630555555556},  // point #17
+{lat: 54.2052777777778, lng: 88.9644444444445},  // point #18
+{lat: 54.205, lng: 88.9636111111111},  // point #19
+{lat: 54.2052777777778, lng: 88.9622222222222},  // point #20
+{lat: 54.2063888888889, lng: 88.9611111111111},  // point #21
+{lat: 54.2102777777778, lng: 88.9605555555556},  // point #22
+{lat: 54.2122222222222, lng: 88.96},  // point #23
+{lat: 54.2136111111111, lng: 88.9569444444444},  // point #24
+{lat: 54.2166666666667, lng: 88.955},  // point #25
+{lat: 54.2177777777778, lng: 88.9558333333333},  // point #26
+{lat: 54.2186111111111, lng: 88.9555555555556},  // point #27
+{lat: 54.22, lng: 88.9536111111111},  // point #28
+{lat: 54.2213888888889, lng: 88.9502777777778},  // point #29
+{lat: 54.2216666666667, lng: 88.9491666666667},  // point #30
+{lat: 54.2227777777778, lng: 88.9488888888889},  // point #31
+{lat: 54.2241666666667, lng: 88.9472222222222},  // point #32
+{lat: 54.2247222222222, lng: 88.9461111111111},  // point #33
+{lat: 54.225, lng: 88.9458333333333},  // point #34
+{lat: 54.2272222222222, lng: 88.9388888888889},  // point #35
+  ];
+
+  var bazanPoly = new google.maps.Polygon({
+   paths: bazanCoords,
+   strokeColor: '#000000',
+   strokeOpacity: 0.8,
+   strokeWeight: 2,
+   fillColor: '#8dff87',
+   fillOpacity: 0.35
+ });
+
+var bazan2Coords = [ //Поселок Базан
+{lat: 54.1988888888889, lng: 88.9747222222222},  // point #1
+{lat: 54.1983333333333, lng: 88.9777777777778},  // point #2
+{lat: 54.1975, lng: 88.9772222222222},  // point #3
+{lat: 54.1977777777778, lng: 88.9741666666667}  // point #4
+  ];
+
+  var bazan2Poly = new google.maps.Polygon({
+   paths: bazan2Coords,
+   strokeColor: '#000000',
+   strokeOpacity: 0.8,
+   strokeWeight: 2,
+   fillColor: '#8dff87',
+   fillOpacity: 0.35
+ });
+
+
+
+  var usaCoords = [ //Средняя Уса
+{lat: 54.0836111111111, lng: 88.7383333333333},  // point #1
+{lat: 54.0858333333333, lng: 88.7394444444444},  // point #2
+{lat: 54.0880555555556, lng: 88.7380555555556},  // point #3
+{lat: 54.0922222222222, lng: 88.7275},  // point #4
+{lat: 54.0936111111111, lng: 88.7233333333333},  // point #5
+{lat: 54.1, lng: 88.7161111111111},  // point #6
+{lat: 54.1055555555556, lng: 88.7127777777778},  // point #7
+{lat: 54.1163888888889, lng: 88.7105555555556},  // point #8
+{lat: 54.1188888888889, lng: 88.7083333333333},  // point #9
+{lat: 54.1191666666667, lng: 88.7091666666667},  // point #10
+{lat: 54.1166666666667, lng: 88.7136111111111},  // point #11
+{lat: 54.1091666666667, lng: 88.7141666666667},  // point #12
+{lat: 54.1066666666667, lng: 88.7158333333333},  // point #13
+{lat: 54.1008333333333, lng: 88.72},  // point #14
+{lat: 54.0975, lng: 88.7219444444444},  // point #15
+{lat: 54.0955555555556, lng: 88.7247222222222},  // point #16
+{lat: 54.0925, lng: 88.7316666666667},  // point #17
+{lat: 54.0891666666667, lng: 88.7413888888889},  // point #18
+{lat: 54.085, lng: 88.7425},  // point #19
+{lat: 54.0830555555556, lng: 88.7411111111111}  // point #20
+  ];
+
+  var usaPoly = new google.maps.Polygon({
+   paths: usaCoords,
+   strokeColor: '#000000',
+   strokeOpacity: 0.8,
+   strokeWeight: 2,
+   fillColor: '#8dff87',
+   fillOpacity: 0.35
+ });
+
+var shatayCoords = [ //Шатай
+{lat: 54.1355555555556, lng: 88.7647222222222},  // point #1
+{lat: 54.1377777777778, lng: 88.775},  // point #2
+{lat: 54.1375, lng: 88.7802777777778},  // point #3
+{lat: 54.1355555555556, lng: 88.7852777777778},  // point #4
+{lat: 54.1338888888889, lng: 88.7880555555556},  // point #5
+{lat: 54.1322222222222, lng: 88.7916666666667},  // point #6
+{lat: 54.1316666666667, lng: 88.7938888888889},  // point #7
+{lat: 54.1308333333333, lng: 88.7983333333333},  // point #8
+{lat: 54.1308333333333, lng: 88.8033333333333},  // point #9
+{lat: 54.1302777777778, lng: 88.8041666666667},  // point #10
+{lat: 54.1297222222222, lng: 88.8041666666667},  // point #11
+{lat: 54.1283333333333, lng: 88.8019444444444},  // point #12
+{lat: 54.1283333333333, lng: 88.8027777777778},  // point #13
+{lat: 54.1288888888889, lng: 88.8044444444444},  // point #14
+{lat: 54.1302777777778, lng: 88.8052777777778},  // point #15
+{lat: 54.1311111111111, lng: 88.8044444444444},  // point #16
+{lat: 54.1316666666667, lng: 88.8019444444444},  // point #17
+{lat: 54.1313888888889, lng: 88.7977777777778},  // point #18
+{lat: 54.1325, lng: 88.7963888888889},  // point #19
+{lat: 54.1330555555556, lng: 88.7922222222222},  // point #20
+{lat: 54.1347222222222, lng: 88.7897222222222},  // point #21
+{lat: 54.1363888888889, lng: 88.7869444444444},  // point #22
+{lat: 54.1380555555556, lng: 88.7827777777778},  // point #23
+{lat: 54.1386111111111, lng: 88.7780555555556},  // point #24
+{lat: 54.1388888888889, lng: 88.7769444444444},  // point #25
+{lat: 54.1380555555556, lng: 88.7680555555555},  // point #26
+{lat: 54.1363888888889, lng: 88.7611111111111},  // point #27
+{lat: 54.1358333333333, lng: 88.7602777777778},  // point #28
+{lat: 54.1352777777778, lng: 88.7591666666667},  // point #29
+{lat: 54.1327777777778, lng: 88.7505555555556},  // point #30
+{lat: 54.1313888888889, lng: 88.7483333333333},  // point #31
+{lat: 54.1291666666667, lng: 88.7458333333333},  // point #32
+{lat: 54.1283333333333, lng: 88.7477777777778},  // point #33
+{lat: 54.1311111111111, lng: 88.7505555555556},  // point #34
+{lat: 54.1338888888889, lng: 88.7611111111111}  // point #35
+  ];
+
+  var shatayPoly = new google.maps.Polygon({
+   paths: shatayCoords,
+   strokeColor: '#000000',
+   strokeOpacity: 0.8,
+   strokeWeight: 2,
+   fillColor: '#8dff87',
+   fillOpacity: 0.35
+ });
+
+
+var yakoCoords = [ //Поселок Яковлевка
+{lat: 54.2338888888889, lng: 89.0525},  // point #1
+{lat: 54.2344444444444, lng: 89.0533333333333},  // point #2
+{lat: 54.2341666666667, lng: 89.0541666666667},  // point #3
+{lat: 54.2338888888889, lng: 89.055},  // point #4
+{lat: 54.2333333333333, lng: 89.0547222222222}  // point #5
+  ];
+
+  var yakoPoly = new google.maps.Polygon({
+   paths: yakoCoords,
+   strokeColor: '#000000',
+   strokeOpacity: 0.8,
+   strokeWeight: 2,
+   fillColor: '#8dff87',
+   fillOpacity: 0.35
+ });
+
+  var yako2Coords = [ //Поселок Яковлевка
+{lat: 54.1258333333333, lng: 88.7325},  // point #1
+{lat: 54.1258333333333, lng: 88.7330555555556},  // point #2
+{lat: 54.1261111111111, lng: 88.7358333333333},  // point #3
+{lat: 54.1258333333333, lng: 88.7363888888889},  // point #4
+{lat: 54.1261111111111, lng: 88.74},  // point #5
+{lat: 54.1263888888889, lng: 88.7408333333333},  // point #6
+{lat: 54.1255555555556, lng: 88.7411111111111},  // point #7
+{lat: 54.1252777777778, lng: 88.7413888888889},  // point #8
+{lat: 54.1255555555556, lng: 88.7425},  // point #9
+{lat: 54.1261111111111, lng: 88.7438888888889},  // point #10
+{lat: 54.1263888888889, lng: 88.745},  // point #11
+{lat: 54.1261111111111, lng: 88.7455555555556},  // point #12
+{lat: 54.1258333333333, lng: 88.745},  // point #13
+{lat: 54.1255555555556, lng: 88.7436111111111},  // point #14
+{lat: 54.1252777777778, lng: 88.7427777777778},  // point #15
+{lat: 54.125, lng: 88.7422222222222},  // point #16
+{lat: 54.125, lng: 88.7419444444444},  // point #17
+{lat: 54.125, lng: 88.7416666666667},  // point #18
+{lat: 54.125, lng: 88.7411111111111},  // point #19
+{lat: 54.1247222222222, lng: 88.7397222222222},  // point #20
+{lat: 54.1247222222222, lng: 88.7369444444444},  // point #21
+{lat: 54.1247222222222, lng: 88.7358333333333},  // point #22
+{lat: 54.1252777777778, lng: 88.7330555555556},  // point #23
+{lat: 54.1255555555556, lng: 88.7325}  // point #24
+  ];
+
+  var yako2Poly = new google.maps.Polygon({
+   paths: yako2Coords,
+   strokeColor: '#000000',
+   strokeOpacity: 0.8,
+   strokeWeight: 2,
+   fillColor: '#8dff87',
+   fillOpacity: 0.35
+ });
+
+ var berezoviyCoords = [ //Поселок Березовый
+{lat: 54.0280555555556, lng: 88.745},  // point #1
+{lat: 54.0272222222222, lng: 88.745},  // point #2
+{lat: 54.0266666666667, lng: 88.7455555555556},  // point #3
+{lat: 54.0263888888889, lng: 88.7455555555556},  // point #4
+{lat: 54.0258333333333, lng: 88.7458333333333},  // point #5
+{lat: 54.0258333333333, lng: 88.7461111111111},  // point #6
+{lat: 54.0255555555556, lng: 88.7466666666667},  // point #7
+{lat: 54.0252777777778, lng: 88.7472222222222},  // point #8
+{lat: 54.0247222222222, lng: 88.7475},  // point #9
+{lat: 54.0241666666667, lng: 88.7475},  // point #10
+{lat: 54.0241666666667, lng: 88.7483333333333},  // point #11
+{lat: 54.0241666666667, lng: 88.7488888888889},  // point #12
+{lat: 54.025, lng: 88.7488888888889},  // point #13
+{lat: 54.0261111111111, lng: 88.7483333333333},  // point #14
+{lat: 54.0283333333333, lng: 88.7469444444445},  // point #15
+{lat: 54.0283333333333, lng: 88.7458333333333},  // point #16
+{lat: 54.0283333333333, lng: 88.745}  // point #17
+  ];
+
+  var berezoviyPoly = new google.maps.Polygon({
+   paths: berezoviyCoords,
+   strokeColor: '#000000',
+   strokeOpacity: 0.8,
+   strokeWeight: 2,
+   fillColor: '#8dff87',
+   fillOpacity: 0.35
+ }); 
+
+var kundatCoords = [ //Северный Кундат
+{lat: 55.1797222222222, lng: 87.7675},  // point #1
+{lat: 55.1811111111111, lng: 87.7669444444444},  // point #2
+{lat: 55.1833333333333, lng: 87.7644444444445},  // point #3
+{lat: 55.1872222222222, lng: 87.7627777777778},  // point #4
+{lat: 55.1877777777778, lng: 87.7594444444444},  // point #5
+{lat: 55.1877777777778, lng: 87.7555555555556},  // point #6
+{lat: 55.1913888888889, lng: 87.7563888888889},  // point #7
+{lat: 55.1913888888889, lng: 87.7619444444444},  // point #8
+{lat: 55.1886111111111, lng: 87.7683333333333},  // point #9
+{lat: 55.1858333333333, lng: 87.7675},  // point #10
+{lat: 55.185, lng: 87.7691666666667},  // point #11
+{lat: 55.1825, lng: 87.7694444444444},  // point #12
+{lat: 55.1811111111111, lng: 87.77},  // point #13
+{lat: 55.1805555555556, lng: 87.7719444444444},  // point #14
+{lat: 55.18, lng: 87.7708333333333}  // point #15
+  ];
+
+  var kundatPoly = new google.maps.Polygon({
+   paths: kundatCoords,
+   strokeColor: '#000000',
+   strokeOpacity: 0.8,
+   strokeWeight: 2,
+   fillColor: '#8dff87',
+   fillOpacity: 0.35
+ }); 
+
+
+
+bazanPoly.setMap(map);
+bazan2Poly.setMap(map);
+bazan3Path.setMap(map);
+usaPoly.setMap(map);
+shatayPoly.setMap(map);
+yakoPoly.setMap(map);
+berezoviyPoly.setMap(map);
+yako2Poly.setMap(map);
+kundatPoly.setMap(map);
+kuzAlPoly.setMap(map);
+kuzAl2Poly.setMap(map);
+
+
+
+
+
+bazanPoly.addListener('click', bazanShowArrays); //Земельный
+bazan2Poly.addListener('click', bazan2ShowArrays); //Поселок Базан
+bazan3Path.addListener('click', bazan3ShowArrays); //Поселок Базан. Дорога
+usaPoly.addListener('click', usaShowArrays); //Земельный
+shatayPoly.addListener('click', shatayShowArrays); //Земельный
+yakoPoly.addListener('click', yakoShowArrays); //Земельный
+yako2Poly.addListener('click', yako2ShowArrays); //Земельный
+berezoviyPoly.addListener('click', berezoviyShowArrays); //Земельный
+kundatPoly.addListener('click', kundatShowArrays); //Земельный
+kuzAl2Poly.addListener('click', kuzAl2ShowArrays); //Буферная зона заповедника
+}
+
+function kuzAl2ShowArrays(event) {
+kuzAl2InfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Буферная зона заповедника<br><b>Кузнецкий Алатау' ;
+kuzAl2InfoWindow.setContent(contentString);
+kuzAl2InfoWindow.setPosition(event.latLng);
+kuzAl2InfoWindow.open(map);
+}
+
+function kundatShowArrays(event) {
+kundatInfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Земельный отвод<br><b>Договор аренды 162/16-н от 23.08.2016 г.' ;
+kundatInfoWindow.setContent(contentString);
+kundatInfoWindow.setPosition(event.latLng);
+kundatInfoWindow.open(map);
+}
+function yako2ShowArrays(event) {
+yako2InfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Земельный отвод<br><b>Договор аренды 108/16-н от 06.07.2016 г.' ;
+yako2InfoWindow.setContent(contentString);
+yako2InfoWindow.setPosition(event.latLng);
+yako2InfoWindow.open(map);
+}
+
+function berezoviyShowArrays(event) {
+berezoviyInfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Земельный отвод<br><b>Договор аренды 111/16-н от 06.07.2016 г.' ;
+berezoviyInfoWindow.setContent(contentString);
+berezoviyInfoWindow.setPosition(event.latLng);
+berezoviyInfoWindow.open(map);
+}
+function yakoShowArrays(event) {
+yakoInfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Земельный отвод<br><b>Договор аренды 78/16-н от 02.06.2016 г.' ;
+yakoInfoWindow.setContent(contentString);
+yakoInfoWindow.setPosition(event.latLng);
+yakoInfoWindow.open(map);
+}
+
+function shatayShowArrays(event) {
+shatayInfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Земельный отвод<br><b>Договор аренды 110/16-н от 06.07.2016 г.' ;
+shatayInfoWindow.setContent(contentString);
+shatayInfoWindow.setPosition(event.latLng);
+shatayInfoWindow.open(map);
+}
+
+function usaShowArrays(event) {
+usaInfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Земельный отвод<br><b>Договор аренды 110/16-н от 06.07.2016 г.' ;
+usaInfoWindow.setContent(contentString);
+usaInfoWindow.setPosition(event.latLng);
+usaInfoWindow.open(map);
+}
+
+
+function bazanShowArrays(event) {
+bazanInfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Земельный отвод<br><b>Договор аренды 107/16-н от 06.07.2016 г. ';
+bazanInfoWindow.setContent(contentString);
+bazanInfoWindow.setPosition(event.latLng);
+bazanInfoWindow.open(map);
+}
+
+function bazan2ShowArrays(event) {
+bazan2InfoWindow = new google.maps.InfoWindow;
+var vertices = this.getPath();
+var contentString = 'Поселок Базан<br><b>Договор аренды 112/16-н от 06.07.2016 г.';
+bazan2InfoWindow.setContent(contentString);
+bazan2InfoWindow.setPosition(event.latLng);
+bazan2InfoWindow.open(map);
+}
+
+
+  function drop1() {
+  clearMarkers();
+  for (var i = 0; i < neighborhoods.length; i++) {
+    addMarkerWithTimeout(neighborhoods[i], i * 300);
+    }
+  }
+
+  function addMarkerWithTimeout(position, timeout) {
+  window.setTimeout(function() {
+    markers.push(new google.maps.Marker({
+      position: position,
+      map: map,
+      animation: google.maps.Animation.DROP
+    }));
+    }, timeout);
+  }
+
+  function drop2() {
+  clearMarkers();
+
+  for (var i = 0; i < neighborhoods2.length; i++) {
+    addMarkerWithTimeout2(neighborhoods2[i], i * 300);
+    }
+  }
+
+  function addMarkerWithTimeout2(position, timeout) {
+  window.setTimeout(function() {
+    markers.push(new google.maps.Marker({
+      position: position,
+      map: map,
+      animation: google.maps.Animation.DROP
+    }));
+    }, timeout);
+
+  ///
+
+  }
+
+
+  function drop3() {
+  clearMarkers();
+
+  for (var i = 0; i < neighborhoods3.length; i++) {
+    addMarkerWithTimeout3(neighborhoods3[i], i * 300);
+    }
+  }
+
+  function addMarkerWithTimeout3(position, timeout) {
+  window.setTimeout(function() {
+    markers.push(new google.maps.Marker({
+      position: position,
+      map: map,
+      animation: google.maps.Animation.DROP
+    }));
+    }, timeout);
+  }
+
+
+  function clearMarkers() {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
+  markers = [];
+  }
+
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIFQ48w8DR2b_6mfQq--D_77sT5B58Vik&signed_in=true&callback=initMap"></script>
+  </body>
+</html>
