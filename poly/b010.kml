@@ -788,7 +788,7 @@
 <Placemark>
 <name>за вычетом</name>
 <description>---</description>
-		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<styleUrl>#yellowPoly</styleUrl>
 		<Polygon>
 			<tessellate>1</tessellate>
 			<outerBoundaryIs>
