@@ -13,7 +13,7 @@
        //Шира — Коммунар - 005
        //Шира — Тисуль - 006
        //Туим - 007
-       
+
        //Немир - Абакан —015
 
 
@@ -256,7 +256,7 @@
 
     <Placemark>
       <name>Березовый - Малый Балаганах 26 км</name>
-      <styleUrl>#road013</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -266,7 +266,7 @@
     </Placemark>
 <Placemark>
       <name>Абакан - Шира 165 км</name>
-      <styleUrl>#road014</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -278,7 +278,7 @@
 
 <Placemark>
       <name>Дорога Немир - Абакан 115 км</name>
-      <styleUrl>#road015</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
