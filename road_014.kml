@@ -122,7 +122,7 @@
 
     <Placemark>
       <name>Коммунар - Базан 29км</name>
-      <styleUrl>#road002</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -135,7 +135,7 @@
 
         <Placemark>
       <name>Базан- Яковлевка 4км</name>
-      <styleUrl>#road003</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -148,7 +148,7 @@
 
         <Placemark>
       <name>Тисуль Северный Кундат - Талановая 129км</name>
-      <styleUrl>#road004</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -161,7 +161,7 @@
 
         <Placemark>
       <name>Шира — Коммунар 67км</name>
-      <styleUrl>#road005</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -174,7 +174,7 @@
 
         <Placemark>
       <name>Шира — Тисуль 254км</name>
-      <styleUrl>#road006</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -187,7 +187,7 @@
 
         <Placemark>
       <name>Дорога через Туим 137км</name>
-      <styleUrl>#road007</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -199,7 +199,7 @@
 
 <Placemark>
       <name>Бодайбо - Тахтыга 25 км</name>
-      <styleUrl>#road008</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -213,7 +213,7 @@
 
 <Placemark>
       <name>Междуреченск - Тисуль 509 км</name>
-      <styleUrl>#road009</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -224,7 +224,7 @@
 
     <Placemark>
       <name>Междуреченск - Таштагол 213 км</name>
-      <styleUrl>#road010</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -234,7 +234,7 @@
     </Placemark>
     <Placemark>
       <name>Перевоз - Березовый 50 км</name>
-      <styleUrl>#road011</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
@@ -245,7 +245,7 @@
 
     <Placemark>
       <name>Бодайбо - Перевоз 280 км</name>
-      <styleUrl>#road012</styleUrl>
+      <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
         <coordinates>
