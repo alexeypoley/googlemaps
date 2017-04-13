@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Золотой полюс - Лицензии<code>setTimeout()</code></title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+#floating-panel2 {
+  position: absolute;
+  top: 10px;
+  left: 360px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+#floating-panel3 {
+  position: absolute;
+  top: 10px;
+  left: 504px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#floating-panel {
+                  margin-left: -52px;
+                }
+#floating-panel2 {
+                  margin-left: -52px;
+                }
+#floating-panel3 {
+                  margin-left: -52px;
+                }
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <button id="drop" onclick="drop1()">Кемеровская область</button>
+     </div>
+     <div id="floating-panel2">
+      <button id="drop" onclick="drop2()">Иркутская область</button>
+     </div>
+      <div id="floating-panel3">
+      <button id="drop" onclick="drop3()">Остальные</button>
+     </div>
+    <div id="map"></div>
+    <script>
+
+var neighborhoods = [
+{lat: 54.0394444444444, lng: 88.7305555555556}, //Лицензия  КЕМ 00527БР (р.Березовая)
+{lat: 54.2227777777778, lng: 88.9497222222222}, //Лицензия  КЕМ 01633БР (р.Верхняя Уса)
+{lat: 54.2558333333333, lng: 89.0230555555556}, //Лицензия  КЕМ 01633БР Собака
+{lat: 55.1797222222222, lng: 87.7661111111111}, //Лицензия  КЕМ 01762БЭ (р.Северный Кундат)
+{lat: 55.1622222222222, lng: 88.0936111111111}, //Лицензия  КЕМ 01869БР (р.Талановая)
+
+];
+
+var neighborhoods2 = [
+{lat: 58.721389, lng: 116.559167}, //Верхний Имянет Лицензия ИРК 03006 БЭ
+{lat: 58.7275, lng: 116.870278}, // Лицензия ИРК 03007 БЭ
+{lat: 58.072222, lng: 113.483333},// Лицензия ИРК 03016 БР
+{lat: 58.6641666666667, lng: 117.056388888889}, //Лицензия ИРК 03248БР (р.Кульбарахун)
+{lat: 58.7338888888889, lng: 116.809444444444} //Лицензия ИРК 03330БР (руч. Березовый)
+
+];
+
+var neighborhoods3 = [
+{lat: 54.9636111111111, lng: 113.306944444444},  //Лицензия УДЭ -1715БР (Иннокентьевский)
+{lat: 52.2326444444444, lng: 88.035175}, //Лицензия ГОА 00447БЭ (р.Албас)
+{lat: 53.445194, lng: 90.199556}, //Лицензия АБН 00730 БЭ (р.Немир)
+{lat: 51.5369444444444, lng: 118.595277777778}, //Лицензия ЧИТ 01911 БЭ
+{lat: 51.2594444444444, lng: 119.083333333333} //Лицензия ЧИТ 14143 БР
+
+];
+
+var markers = [];
+var InfoWindow = [];
+var historicalOverlay;
+var markerMzk;
+var markerShira;
+
+
+
+var map;
+var chicago = {lat: 56.151362, lng: 101.634080};
+function CenterControl(controlDiv, map) {
+
+  // Set CSS for the control border.
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = '#fff';
+  controlUI.style.border = '2px solid #fff';
+  controlUI.style.borderRadius = '3px';
+  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.marginBottom = '22px';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to recenter the map';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior.
+  var controlText = document.createElement('div');
+  controlText.style.color = 'rgb(25,25,25)';
+  controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+  controlText.style.fontSize = '16px';
+  controlText.style.lineHeight = '38px';
+  controlText.style.paddingLeft = '5px';
+  controlText.style.paddingRight = '5px';
+  controlText.innerHTML = 'В центр';
+  controlUI.appendChild(controlText);
+
+  // Setup the click event listeners: simply set the map to Chicago.
+  controlUI.addEventListener('click', function() {
+    map.setCenter(chicago);
+  });
+
+}
+//#############
+
+function initMap() {
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 5,
+    center: {lat: 56.151362, lng: 101.634080},
+    // center: {lat: 56.151362, lng: 101.634080},
+    
+  });
+
+ // Create the DIV to hold the control and call the CenterControl() constructor
+  // passing in this DIV.
+  var centerControlDiv = document.createElement('div');
+  var centerControl = new CenterControl(centerControlDiv, map);
+
+  centerControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+
+
+
+//Дороги
+var roadLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/road_022.kml',   
+    map: map
+  });
+
+//Золотой полюс
+var homeLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/gold.kml',   
+    map: map
+  });
+
+//Сибирская горная
+var sgkLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/sgk2.kml',
+    map: map
+  });
+
+//Лицензии
+var licLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/b024.kml',
+    map: map
+  });
+
+//охотничьи угодья
+var hunterLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/zoone4.kml',
+    map: map
+  });
+
+//База Бодайбо
+var bodayboLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/cat.kml',
+    map: map
+  });
+
+
+//земельные отводы
+var zemliLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/zemli004.kml',
+    map: map
+  });
+
+//зона загрузки страницы
+var reloadMapLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/zone2.kml',
+    map: map
+  });
+
+}
+
+
+
+
+  function drop1() {
+  clearMarkers();
+  for (var i = 0; i < neighborhoods.length; i++) {
+    addMarkerWithTimeout(neighborhoods[i], i * 300);
+    }
+  }
+
+  function addMarkerWithTimeout(position, timeout) {
+  window.setTimeout(function() {
+    markers.push(new google.maps.Marker({
+      position: position,
+      map: map,
+      animation: google.maps.Animation.DROP
+    }));
+    }, timeout);
+  }
+
+  function drop2() {
+  clearMarkers();
+
+  for (var i = 0; i < neighborhoods2.length; i++) {
+    addMarkerWithTimeout2(neighborhoods2[i], i * 300);
+    }
+  }
+
+  function addMarkerWithTimeout2(position, timeout) {
+  window.setTimeout(function() {
+    markers.push(new google.maps.Marker({
+      position: position,
+      map: map,
+      animation: google.maps.Animation.DROP
+    }));
+    }, timeout);
+
+  ///
+
+  }
+
+
+  function drop3() {
+  clearMarkers();
+
+  for (var i = 0; i < neighborhoods3.length; i++) {
+    addMarkerWithTimeout3(neighborhoods3[i], i * 300);
+    }
+  }
+
+  function addMarkerWithTimeout3(position, timeout) {
+  window.setTimeout(function() {
+    markers.push(new google.maps.Marker({
+      position: position,
+      map: map,
+      animation: google.maps.Animation.DROP
+    }));
+    }, timeout);
+  }
+
+
+  function clearMarkers() {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
+  markers = [];
+  }
+
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIFQ48w8DR2b_6mfQq--D_77sT5B58Vik&signed_in=true&callback=initMap"></script>
+  </body>
+</html>
