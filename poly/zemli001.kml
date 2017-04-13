@@ -2,23 +2,32 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
 	<name>Лицензии ЗАО ас Золотой Полюс</name>
-	
-
-
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
 	<StyleMap id="msn_ylw-pushpin">
-		
 		<Pair>
 			<key>normal</key>
 			<styleUrl>#sn_ylw-pushpin</styleUrl>
 		</Pair>
-
 		<Pair>
 			<key>highlight</key>
 			<styleUrl>#sh_ylw-pushpin</styleUrl>
 		</Pair>
-
 	</StyleMap>
-
 
 	<Style id="sh_ylw-pushpin">
 		<IconStyle>
@@ -28,16 +37,30 @@
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
-
 		<LineStyle>
-			<color>7f00e3a0</color>
+			<color>7f0000ff</color>
 		</LineStyle>
-
 		<PolyStyle>
-			<color>7f00e3a0</color>
+			<color>7f0000ff</color>
 			<colorMode>random</colorMode>
 		</PolyStyle>
+	</Style>
 
+		<Style id="yellowPoly">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7fFFCC00</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fFFCC00</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
 	</Style>
 
 
