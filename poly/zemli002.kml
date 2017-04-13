@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Лицензии ЗАО ас Золотой Полюс</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+		<Style id="yellowPoly">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7fFFCC00</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fFFCC00</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Базан</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+88.933889,54.226667
+88.933611,54.226944
+88.937222,54.228333
+88.940000,54.231389
+88.953611,54.230833
+88.955000,54.230556
+88.957778,54.230556
+88.961389,54.229444
+88.958056,54.226944
+88.959167,54.224167
+88.961111,54.221944
+88.958333,54.216667
+88.958333,54.215833
+88.960278,54.213889
+88.963056,54.213611
+88.965000,54.211667
+88.963056,54.208889
+88.964444,54.205278
+88.963611,54.205000
+88.962222,54.205278
+88.961111,54.206389
+88.960556,54.210278
+88.960000,54.212222
+88.956944,54.213611
+88.955000,54.216667
+88.955833,54.217778
+88.955556,54.218611
+88.953611,54.220000
+88.950278,54.221389
+88.949167,54.221667
+88.948889,54.222778
+88.947222,54.224167
+88.946111,54.224722
+88.945833,54.225000
+88.938889,54.227222
+
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Базан. Поселок</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+88.974722,54.198889
+88.977778,54.198333
+88.977222,54.197500
+88.974167,54.197778
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Прирезка</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+89.027222,54.165278
+89.027500,54.170000
+89.026111,54.176944
+89.025556,54.176944
+89.026111,54.173333
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Базан. Верх</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+89.032778,54.165556
+89.027222,54.165278
+89.028056,54.162500
+89.021667,54.160833
+89.015833,54.160000
+89.012500,54.159167
+89.012778,54.158611
+89.022500,54.160000
+89.026667,54.161389
+89.028333,54.161389
+89.028889,54.159722
+89.028333,54.156667
+89.030000,54.153889
+89.032222,54.154167
+89.032222,54.158889
+89.032778,54.161389
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+<Placemark>
+<name>Договор аренды</name>
+<description>110/16-н от 06,07,16</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+88.738333,54.083611
+88.739444,54.085833
+88.738056,54.088056
+88.727500,54.092222
+88.723333,54.093611
+88.716111,54.100000
+88.712778,54.105556
+88.710556,54.116389
+88.708333,54.118889
+88.709167,54.119167
+88.713611,54.116667
+88.714167,54.109167
+88.715833,54.106667
+88.720000,54.100833
+88.721944,54.097500
+88.724722,54.095556
+88.731667,54.092500
+88.741389,54.089167
+88.742500,54.085000
+88.741111,54.083056
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Шатай верх</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+88.764722,54.135556
+88.775000,54.137778
+88.780278,54.137500
+88.785278,54.135556
+88.788056,54.133889
+88.791667,54.132222
+88.793889,54.131667
+88.798333,54.130833
+88.803333,54.130833
+88.804167,54.130278
+88.804167,54.129722
+88.801944,54.128333
+88.802778,54.128333
+88.804444,54.128889
+88.805278,54.130278
+88.804444,54.131111
+88.801944,54.131667
+88.797778,54.131389
+88.796389,54.132500
+88.792222,54.133056
+88.789722,54.134722
+88.786944,54.136389
+88.782778,54.138056
+88.778056,54.138611
+88.776944,54.138889
+88.768056,54.138056
+88.761111,54.136389
+88.760278,54.135833
+88.759167,54.135278
+88.750556,54.132778
+88.748333,54.131389
+88.745833,54.129167
+88.747778,54.128333
+88.750556,54.131111
+88.761111,54.133889
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Яковлевка. Поселок</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+89.052500,54.233889
+89.053333,54.234444
+89.054167,54.234167
+89.055000,54.233889
+89.054722,54.233333
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Березовая. Поселок</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+88.745000,54.028056
+88.745000,54.027222
+88.745556,54.026667
+88.745556,54.026389
+88.745833,54.025833
+88.746111,54.025833
+88.746667,54.025556
+88.747222,54.025278
+88.747500,54.024722
+88.747500,54.024167
+88.748333,54.024167
+88.748889,54.024167
+88.748889,54.025000
+88.748333,54.026111
+88.746944,54.028333
+88.745833,54.028333
+88.745000,54.028333
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Шатай. Поселок</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+88.732500,54.125833
+88.733056,54.125833
+88.735833,54.126111
+88.736389,54.125833
+88.740000,54.126111
+88.740833,54.126389
+88.741111,54.125556
+88.741389,54.125278
+88.742500,54.125556
+88.743889,54.126111
+88.745000,54.126389
+88.745556,54.126111
+88.745000,54.125833
+88.743611,54.125556
+88.742778,54.125278
+88.742222,54.125000
+88.741944,54.125000
+88.741667,54.125000
+88.741111,54.125000
+88.739722,54.124722
+88.736944,54.124722
+88.735833,54.124722
+88.733056,54.125278
+88.732500,54.125556
+
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Яковлевка. Участок</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+89.054444,54.235833
+89.052778,54.236667
+89.051111,54.237222
+89.048056,54.238889
+89.047500,54.241111
+89.047222,54.242778
+89.046389,54.243611
+89.044722,54.244167
+89.043889,54.244167
+89.043611,54.243889
+89.046944,54.241667
+89.046944,54.238056
+89.048056,54.236667
+89.051667,54.234167
+89.051667,54.233333
+89.057222,54.227222
+89.057500,54.226389
+89.058333,54.225833
+89.057500,54.223333
+89.053889,54.220000
+89.054167,54.215833
+89.056111,54.215833
+89.056667,54.219444
+89.059722,54.222500
+89.060000,54.225000
+89.060833,54.226389
+89.065278,54.229722
+89.066944,54.231944
+89.064167,54.232778
+89.060833,54.234167
+89.057222,54.234444
+
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+
+<Placemark>
+<name>Договор аренды</name>
+<description>Серевный Кундат</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+87.767500,55.179722
+87.766944,55.181111
+87.764444,55.183333
+87.762778,55.187222
+87.759444,55.187778
+87.755556,55.187778
+87.756389,55.191389
+87.761944,55.191389
+87.768333,55.188611
+87.767500,55.185833
+87.769167,55.185000
+87.769444,55.182500
+87.770000,55.181111
+87.771944,55.180556
+87.770833,55.180000
+
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<!-- <Placemark>
+<name>Договор аренды</name>
+<description>Яковлевка. Поселок</description>
+	<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark> -->
+
+
+
+</Document>
+</kml>
