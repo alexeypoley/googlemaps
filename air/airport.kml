@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Аэропорт Абакан.kml</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<color>cc00aaff</color>
+			<scale>1.06364</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<color>cc00aaff</color>
+			<scale>0.9</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+
+	<Placemark>
+		<name>Аэропорт Абакан</name>
+		<LookAt>
+			<longitude>91.10741392572139</longitude>
+			<latitude>53.84732184192711</latitude>
+			<altitude>0</altitude>
+			<heading>0.3737839914597103</heading>
+			<tilt>0</tilt>
+			<range>141649.4571501998</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>91.39040284805427,53.69750543348651,0</coordinates>
+		</Point>
+	</Placemark>
+
+		<Placemark>
+		<name>Аэропорт Кемерово</name>
+		<LookAt>
+			<longitude>86.08171305883104</longitude>
+			<latitude>55.36315016912415</latitude>
+			<altitude>0</altitude>
+			<heading>21.68946166873873</heading>
+			<tilt>0</tilt>
+			<range>69539.92017133525</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>86.10526161672591,55.26508899598365,0</coordinates>
+		</Point>
+	</Placemark>
+
+		<Placemark>
+		<name>Аэропорт Магадан</name>
+		<LookAt>
+			<longitude>150.5011139153073</longitude>
+			<latitude>59.50364786344483</latitude>
+			<altitude>0</altitude>
+			<heading>-0.03803055832105914</heading>
+			<tilt>0</tilt>
+			<range>132256.153064817</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>150.8064879947737,59.57375163198461,0</coordinates>
+		</Point>
+	</Placemark>
+
+		<Placemark>
+		<name>Аэропорт Москва</name>
+		<LookAt>
+			<longitude>37.79521454996616</longitude>
+			<latitude>55.73975045257992</latitude>
+			<altitude>0</altitude>
+			<heading>-20.02633809854393</heading>
+			<tilt>0</tilt>
+			<range>53152.05733437323</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>37.72169611912478,55.762965259132,0</coordinates>
+		</Point>
+	</Placemark>
+
+		<Placemark>
+		<name>Аэропорт &quot;Толмачево&quot;</name>
+		<description>г. Новосибирск</description>
+		<LookAt>
+			<longitude>82.90368735317651</longitude>
+			<latitude>55.10495445177612</latitude>
+			<altitude>0</altitude>
+			<heading>19.08375780088445</heading>
+			<tilt>0</tilt>
+			<range>95193.87371729175</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<gx:balloonVisibility>1</gx:balloonVisibility>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>82.64620576680095,55.00498197855497,0</coordinates>
+		</Point>
+	</Placemark>
+
+		<Placemark>
+		<name>Аэропорт Улан-Удэ</name>
+		<LookAt>
+			<longitude>107.578839925158</longitude>
+			<latitude>51.82876787535128</latitude>
+			<altitude>0</altitude>
+			<heading>0.006839299770177023</heading>
+			<tilt>0</tilt>
+			<range>64618.45301711943</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>107.578839925158,51.82876787535128,0</coordinates>
+		</Point>
+	</Placemark>
+
+
+		<Placemark>
+		<name>Аэропорт Чита</name>
+		<LookAt>
+			<longitude>113.4281432748535</longitude>
+			<latitude>52.04990028637525</latitude>
+			<altitude>0</altitude>
+			<heading>-0.0004790651908918008</heading>
+			<tilt>0</tilt>
+			<range>46649.88422089134</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>113.4281432748535,52.04990028637525,0</coordinates>
+		</Point>
+	</Placemark>
+
+		<Placemark>
+		<name>Аэропорт&quot;Спиченково&quot;</name>
+		<description>г. Новокузнецк</description>
+		<LookAt>
+			<longitude>87.01361325989262</longitude>
+			<latitude>53.82048894022557</latitude>
+			<altitude>0</altitude>
+			<heading>22.4625948013894</heading>
+			<tilt>0</tilt>
+			<range>62655.89057058405</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>86.85755247722125,53.80226807999328,0</coordinates>
+		</Point>
+	</Placemark>
+
+		<Placemark>
+		<name>Аэропорт Иркутск</name>
+		<LookAt>
+			<longitude>104.4220663024605</longitude>
+			<latitude>52.31778137784218</latitude>
+			<altitude>0</altitude>
+			<heading>0.09260727888370646</heading>
+			<tilt>0</tilt>
+			<range>107248.1387819992</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>104.2076783454925,52.27421396908739,0</coordinates>
+		</Point>
+	</Placemark>
+
+	
+</Document>
+</kml>
