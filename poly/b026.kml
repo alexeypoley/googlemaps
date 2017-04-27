@@ -712,7 +712,7 @@
 		</Polygon>
 </Placemark>
 
-<Placemark>
+<!-- <Placemark>
 <name>Лицензия  МАГ 02220 БЭ???</name>
 <description>?????</description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -733,7 +733,7 @@
 				</LinearRing>
 			</outerBoundaryIs>
 		</Polygon>
-</Placemark>
+</Placemark> -->
 
 <Placemark>
 <name>Лицензия ГОА 00447 БЭ</name>
