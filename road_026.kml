@@ -259,7 +259,7 @@
 
 
     <Placemark>
-      <name>Магадан -Сусуман 580 км</name>
+      <name>Магадан - Сусуман 580 км</name>
       <styleUrl>#road001</styleUrl>
       <LineString>
         <altitudeMode>relative</altitudeMode>
