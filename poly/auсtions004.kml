@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Лицензии ЗАО ас Золотой Полюс</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+	<StyleMap id="msn_ylw-pushpin">
+		
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+
+	</StyleMap>
+
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+		<Style id="yellowPoly">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7fFFCC00</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fFFCC00</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+
+
+<Placemark>
+<name>Лицензия МАГ 02220 БЭ</name>
+<description> - </description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+148.750000,62.658333
+148.683333,62.691667
+148.683333,62.741667
+148.666667,62.775000
+148.700000,62.775000
+148.700000,62.775000
+148.716667,62.691667
+148.783333,62.658333
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Лицензия МАГ 02548 БЭ</name>
+<description> -</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+148.688056,62.797222
+148.687500,62.801389
+148.704167,62.801389
+148.705000,62.798333
+148.709444,62.798889
+148.721944,62.798333
+148.721667,62.799722
+148.730000,62.800833
+148.749722,62.800556
+148.774167,62.798611
+148.798056,62.792778
+148.822500,62.776111
+148.830556,62.771389
+148.830833,62.768889
+148.826111,62.768611
+148.825278,62.770000
+148.790000,62.787500
+148.781111,62.790556
+148.768611,62.771111
+148.758611,62.774167
+148.768611,62.791944
+148.761389,62.793333
+148.752500,62.793611
+148.745833,62.792778
+148.726111,62.792500
+148.726389,62.789167
+148.708056,62.786111
+148.711944,62.782778
+148.713889,62.780556
+148.708056,62.778889
+148.703056,62.781944
+148.700833,62.784722
+148.695278,62.783889
+148.687500,62.788889
+148.669444,62.788611
+148.668611,62.795278
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Лицензия МАГ 04202 БЭ</name>
+<description> - </description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+148.830833,62.768889
+148.835278,62.764167
+148.841944,62.765833
+148.854167,62.749167
+148.861111,62.738056
+148.863056,62.728056
+148.845556,62.728056
+148.845833,62.724444
+148.842222,62.724167
+148.842778,62.720556
+148.849444,62.720833
+148.851111,62.719722
+148.861944,62.712778
+148.859444,62.710000
+148.855556,62.700278
+148.850833,62.700000
+148.851389,62.712500
+148.846389,62.712222
+148.832222,62.708333
+148.834444,62.701944
+148.816389,62.700000
+148.822222,62.706944
+148.828333,62.712222
+148.836389,62.720556
+148.831389,62.722778
+148.833333,62.733333
+148.822222,62.753611
+148.823333,62.754722
+148.817500,62.757778
+148.825833,62.768333
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Лицензия МАГ 04426 БР</name>
+<description> - </description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+148.783333,62.658333
+148.799167,62.620833
+148.782222,62.621111
+148.781944,62.618056
+148.800000,62.616389
+148.805556,62.600000
+148.607500,62.468333
+148.575000,62.481667
+148.639167,62.520278
+148.624167,62.525833
+148.565556,62.524444
+148.575556,62.541111
+148.605278,62.547778
+148.633889,62.533611
+148.651111,62.527778
+148.681944,62.546389
+148.598889,62.555000
+148.611944,62.563333
+148.671667,62.558611
+148.638333,62.571944
+148.662222,62.579167
+148.700556,62.561111
+148.764167,62.607778
+148.750000,62.658333
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Лицензия МАГ 04461 БЭ</name>
+<description> - </description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+148.583056,62.833056
+148.591944,62.837222
+148.608056,62.829444
+148.601389,62.826389
+148.605556,62.823611
+148.613611,62.826389
+148.631944,62.816944
+148.625833,62.814722
+148.632222,62.812500
+148.638333,62.814167
+148.643611,62.811111
+148.640278,62.809444
+148.645833,62.805833
+148.650833,62.806667
+148.666667,62.799722
+148.644444,62.787778
+148.636111,62.791667
+148.640833,62.794167
+148.633611,62.808889
+148.583056,62.816667
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+<Placemark>
+<name>Лицензия МАГ 04663 БЭ</name>
+<description>ВЕТРОВЫЙ</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+148.840556,62.505278
+148.823056,62.498056
+148.729444,62.547222
+148.748056,62.554444
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Лицензия МАГ 04697 БР</name>
+<description>Лунный</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+148.591111,62.475000
+148.585000,62.464167
+148.600000,62.459444
+148.607222,62.451667
+148.604167,62.449722
+148.590278,62.457778
+148.582500,62.459167
+148.572222,62.451944
+148.580556,62.448611
+148.581389,62.442500
+148.577778,62.442778
+148.576111,62.445833
+148.567778,62.449444
+148.561667,62.444444
+148.568056,62.443889
+148.567500,62.442222
+148.561667,62.442778
+148.558056,62.443611
+148.557778,62.443056
+148.573333,62.437222
+148.572500,62.432778
+148.568889,62.433333
+148.569167,62.436111
+148.551667,62.440556
+148.545000,62.434444
+148.557500,62.429444
+148.559167,62.427222
+148.556667,62.426944
+148.539167,62.432500
+148.538611,62.428333
+148.528889,62.428611
+148.527500,62.434167
+148.545556,62.442222
+148.560833,62.453611
+148.570278,62.463611
+148.576389,62.472500
+148.586111,62.476944
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+<Placemark>
+<name>Аукцион</name>
+<description>месторождение руч. Косой, руч. Широкий, лев. пр. р. Правый Среднекан, руч. Росомаха, пр. пр. руч. Широкий в Среднеканском городском округе Магаданской области
+</description>
+		<styleUrl>#yellowPoly</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+152.612222,61.991667
+152.619167,61.985556
+152.629167,61.980833
+152.639444,61.973611
+152.668889,61.942222
+152.508333,61.914444
+152.460556,61.940556
+152.597500,62.005833
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+<Placemark>
+<name>Аукцион</name>
+<description> месторождение руч. Калык с притоками руч. Благодатный-Витя руч. Верхний, лев. пр. р. Бургачан в Северо-Эвенском городском округе Магаданской области</description>
+		<styleUrl>#yellowPoly</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+
+159.451944,65.285278
+159.470833,65.298333
+159.504722,65.309444
+159.466667,65.333889
+159.471667,65.335556
+159.515833,65.312500
+159.533056,65.319167
+159.512222,65.336944
+159.522778,65.336944
+159.543056,65.322500
+159.603056,65.334167
+159.538056,65.349167
+159.541389,65.351389
+159.609722,65.336667
+159.638056,65.347222
+159.664167,65.332778
+159.618056,65.326389
+159.616667,65.274444
+159.631389,65.260556
+159.653056,65.229167
+159.654167,65.210556
+159.614444,65.203056
+159.606944,65.179444
+159.566944,65.188056
+159.561667,65.195833
+159.565556,65.211667
+159.573056,65.217500
+159.565556,65.279167
+159.589167,65.315556
+159.576667,65.318056
+159.509167,65.297778
+159.505278,65.266944
+159.517778,65.232778
+159.532222,65.229167
+159.515278,65.207500
+159.505278,65.205556
+159.495556,65.210278
+159.460556,65.210278
+159.449167,65.215556
+159.424444,65.230000
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+</Document>
+</kml>
