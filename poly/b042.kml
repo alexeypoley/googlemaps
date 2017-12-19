@@ -2641,6 +2641,8 @@
 		</Polygon>
 </Placemark> 
 
+
+<Placemark>
 <name>Солнечное</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2661,6 +2663,8 @@
 		</Polygon>
 </Placemark> 
 
+
+<Placemark>
 <name>Бролик</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2681,6 +2685,8 @@
 		</Polygon>
 </Placemark> 
 
+
+<Placemark>
 <name>Юный</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2718,6 +2724,8 @@
 		</Polygon>
 </Placemark> 
 
+
+<Placemark>
 <name>Дебютный</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2762,6 +2770,8 @@
 		</Polygon>
 </Placemark> 
 
+
+<Placemark>
 <name>Захарка</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2785,6 +2795,8 @@
 		</Polygon>
 </Placemark> 
 
+
+<Placemark>
 <name>Снежный</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2807,7 +2819,7 @@
 		</Polygon>
 </Placemark> 
 
-
+<Placemark>
 <name>Спорный</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2830,7 +2842,7 @@
 		</Polygon>
 </Placemark> 
 
-
+<Placemark>
 <name>Средний</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2852,6 +2864,7 @@
 		</Polygon>
 </Placemark> 
 
+<Placemark>
 <name>Широкий</name>
 <description></description>
 		<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -2883,8 +2896,6 @@
 148.629444,62.095833
 148.601944,62.098611
 148.576944,62.098889
-
-
 					</coordinates>
 				</LinearRing>
 			</outerBoundaryIs>
