@@ -1807,7 +1807,7 @@
 
 <!-- Аукционы 15.08 -->
 
-
+<!--
 <Placemark>
 <name>Верховье р. Ундурги с притоком Цаган-Челутай в Карымском</name>
 <description>---</description>
@@ -3103,6 +3103,9 @@
 			</outerBoundaryIs>
 		</Polygon>
 </Placemark> 
+
+-->
+
 
 <!-- Аукционы 22.08 -->
 
