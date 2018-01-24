@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Лицензии ЗАО ас Золотой Полюс</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+		<Style id="yellowPoly">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7fFFCC00</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fFFCC00</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+<Placemark>
+<name>Лицензия АБН 00730 БЭ</name>
+<description>р. Немир</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+90.1995555555556,53.4451944444444
+90.2075,53.4555555555556
+90.2075,53.4588888888889
+90.2055555555556,53.4655555555556
+90.1980555555556,53.47
+90.1819444444445,53.4778611111111
+90.1774444444444,53.4838055555556
+90.16675,53.4903888888889
+90.1688333333333,53.5011416666667
+90.1693361111111,53.5098611111111
+90.1646111111111,53.5230277777778
+90.1583333333333,53.53075
+90.1601944444445,53.5351666666667
+90.1668361111111,53.5393888888889
+90.1710277777778,53.5374722222222
+90.1638055555556,53.5325
+90.1672805555556,53.5265
+90.1730833333333,53.5205277777778
+90.1748611111111,53.512
+90.175,53.5018916666667
+90.1741666666667,53.4929166666667
+90.1812777777778,53.4860833333333
+90.1874444444445,53.4806111111111
+90.2008638888889,53.47275
+90.2120555555556,53.47275
+90.2178916666667,53.4747777777778
+90.2206388888889,53.4771944444444
+90.2245,53.4761944444444
+90.2203888888889,53.4721388888889
+90.22375,53.4712777777778
+90.2229722222222,53.4693916666667
+90.2173083333333,53.4703333333333
+90.2055277777778,53.4689722222222
+90.2111388888889,53.4640555555556
+90.2135,53.4585277777778
+90.2366111111111,53.4535833333333
+90.2352527777778,53.4509722222222
+90.2138333333333,53.4559444444444
+90.2140277777778,53.4518361111111
+90.2044166666667,53.444
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+
+</Document>
+</kml>
