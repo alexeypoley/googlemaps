@@ -155,13 +155,9 @@ function initMap() {
     
   });
 
- // Create the DIV to hold the control and call the CenterControl() constructor
-  // passing in this DIV.
-  var centerControlDiv = document.createElement('div');
-  var centerControl = new CenterControl(centerControlDiv, map);
 
-  centerControlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+
+
 
 
 
@@ -172,166 +168,172 @@ function initMap() {
 //   });
 
 //Золотой полюс 00527
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527.xml',   
-    map: map
-  });
+var KmlLayer = new google.maps.KmlLayer({
+
+url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527.kml';   
+
+
+  map: map
+});
+
 
 //Золотой полюс 03006
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03006.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03006.kml',   
     map: map
   });
 
+
+
 //Золотой полюс 04697
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04697.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04697.kml',   
     map: map
   });
 
 //Золотой полюс 04663
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04663.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04663.kml',   
     map: map
   });
 
 //Золотой полюс 04461
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04461.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04461.kml',   
     map: map
   });
 
 //Золотой полюс 04426
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04426.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04426.kml',   
     map: map
   });
 
 //Золотой полюс 04202
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04202.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/04202.kml',   
     map: map
   });
 
 //Золотой полюс 03330
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03330.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03330.kml',   
     map: map
   });
 
 //Золотой полюс 03248
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03248.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03248.kml',   
     map: map
   });
 
 //Золотой полюс 03016
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03016.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03016.kml',   
     map: map
   });
 
 //Золотой полюс 03007
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03007.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03007.kml',   
     map: map
   });
 
 //Золотой полюс 03006
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03006.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/03006.kml',   
     map: map
   });
 
 //Золотой полюс 02548
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/02548.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/02548.kml',   
     map: map
   });
 
 //Золотой полюс 02220
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/02220.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/02220.kml',   
     map: map
   });
 
 //Золотой полюс 02035
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/02035.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/02035.kml',   
     map: map
   });
 
 //Золотой полюс 01869
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/01869.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/01869.kml',   
     map: map
   });
 
 //Золотой полюс 01762
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/01762.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/01762.kml',   
     map: map
   });
 
 //Золотой полюс 01633
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/01633.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/01633.kml',   
     map: map
   });
 
 //Золотой полюс 01633_2
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/01633_2.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/01633_2.kml',   
     map: map
   });
 
 //Золотой полюс 00730
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00730.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00730.kml',   
     map: map
   });
 
 //Золотой полюс 00527_1
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527_1.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527_1.kml',   
     map: map
   });
 
 //Золотой полюс 00527_2
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527_2.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527_2.kml',   
     map: map
   });
 
 //Золотой полюс 00527_3
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527_3.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527_3.kml',   
     map: map
   });
 
 //Золотой полюс 00527_4
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527_4.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00527_4.kml',   
     map: map
   });
 
 
 //Золотой полюс 00447
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00447.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00447.kml',   
     map: map
   });
 
 
 //Золотой полюс 00447_0
-var homeLayer = new google.maps.KmlLayer({
- url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00447_0.xml',   
+var KmlLayer = new google.maps.KmlLayer({
+ url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/lic/00447_0.kml',   
     map: map
   });
 
 
 //Сибирская горная
-var sgkLayer = new google.maps.KmlLayer({
+var KmlLayer = new google.maps.KmlLayer({
  url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/sgk2.kml',
     map: map
   });
@@ -343,13 +345,13 @@ var sgkLayer = new google.maps.KmlLayer({
 //   });
 
 //охотничьи угодья
-var hunterLayer = new google.maps.KmlLayer({
+var KmlLayer = new google.maps.KmlLayer({
  url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/poly/zoone4.kml',
     map: map
   });
 
 //База Бодайбо
-var bodayboLayer = new google.maps.KmlLayer({
+var KmlLayer = new google.maps.KmlLayer({
  url: 'http://raw.githubusercontent.com/alexeypoley/googlemaps/master/cat.kml',
     map: map
   });
@@ -436,8 +438,8 @@ var reloadMapLayer = new google.maps.KmlLayer({
   }
   markers = [];
   }
-
-
+ //AIzaSyAJyDRjf7A0mP6EzqVUgu7kCRyP2pVokqU 
+ //AIzaSyBIFQ48w8DR2b_6mfQq--D_77sT5B58Vik
     </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIFQ48w8DR2b_6mfQq--D_77sT5B58Vik&signed_in=true&callback=initMap"></script>
