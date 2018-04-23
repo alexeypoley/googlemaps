@@ -11,10 +11,10 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>7f0000ff</color>
+			<color>7f4737d4</color>
 		</LineStyle>
 		<PolyStyle>
-			<color>7f0000ff</color>
+			<color>7f4737d4</color>
 			<colorMode>random</colorMode>
 		</PolyStyle>
 	</Style>
@@ -55,10 +55,10 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>7fFFCC00</color>
+			<color>7f4737d4</color>
 		</LineStyle>
 		<PolyStyle>
-			<color>7fFFCC00</color>
+			<color>7f4737d4</color>
 			<colorMode>random</colorMode>
 		</PolyStyle>
 	</Style>
