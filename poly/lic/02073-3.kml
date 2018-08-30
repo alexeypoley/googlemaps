@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Лицензии ЗАО ас Золотой Полюс</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+		<Style id="yellowPoly">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7fFFCC00</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fFFCC00</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+<Placemark>
+<name>Лицензия КЕМ 02073 БП</name>
+<description>светлый</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+88.767500,54.011944
+88.769444,54.012222
+88.771389,54.013333
+88.775556,54.009444
+88.781389,54.008611
+88.769444,54.009444
+88.788056,54.011111
+88.790000,54.010556
+88.789444,54.008333
+88.795833,54.008889
+88.797222,54.007222
+88.793611,54.006667
+88.798611,54.002222
+88.796111,54.000556
+88.790556,54.005556
+88.785278,54.007222
+88.783333,54.004167
+88.781111,54.004444
+88.781111,54.006667
+88.771944,54.008056
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+
+</Document>
+</kml>

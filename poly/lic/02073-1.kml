@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Лицензии ЗАО ас Золотой Полюс</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000ff</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+		<Style id="yellowPoly">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7fFFCC00</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7fFFCC00</color>
+			<colorMode>random</colorMode>
+		</PolyStyle>
+	</Style>
+
+<Placemark>
+<name>Лицензия КЕМ 02073 БП</name>
+<description>саквалас-тумуяс-уса</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+88.704444,53.975833
+88.710278,53.972500
+88.722778,53.978333
+88.740278,53.977222
+88.744722,53.973889
+88.752500,53.978333
+88.746389,53.986944
+88.751944,53.987500
+88.756944,53.980278
+88.762222,53.985556
+88.763333,53.991111
+88.766667,53.990833
+88.766944,53.986111
+88.774167,53.985833
+88.784444,53.991667
+88.787500,53.989722
+88.778333,53.983889
+88.766944,53.982778
+88.746389,53.970278
+88.754444,53.967778
+88.766944,53.971389
+88.769167,53.965556
+88.757778,53.964167
+88.744167,53.967222
+88.747222,53.962222
+88.753056,53.948889
+88.758889,53.945000
+88.751944,53.943333
+88.743333,53.946111
+88.743611,53.951944
+88.736944,53.958889
+88.739722,53.963056
+88.736389,53.968333
+88.738056,53.972500
+88.730833,53.975000
+88.712500,53.968611
+88.706389,53.970000
+88.700556,53.973611
+88.694167,53.974167
+88.693611,53.958611
+88.705556,53.952500
+88.701944,53.950278
+88.694444,53.954167
+88.698889,53.947778
+88.707778,53.933056
+88.699444,53.933056
+88.696389,53.936389
+88.686944,53.936389
+88.682222,53.933611
+88.676111,53.935833
+88.684722,53.940000
+88.691389,53.938889
+88.693333,53.940278
+88.692500,53.944722
+88.680556,53.940833
+88.668056,53.938333
+88.661667,53.940833
+88.678889,53.944167
+88.678333,53.948056
+88.688611,53.948611
+88.685278,53.957778
+88.685556,53.975278
+88.682778,53.975556
+88.674167,53.971944
+88.657500,53.974167
+88.656667,53.968611
+88.670833,53.958333
+88.666389,53.956667
+88.663056,53.958333
+88.656944,53.955278
+88.652500,53.957222
+88.660278,53.960556
+88.650278,53.968611
+88.650556,53.973889
+88.621944,53.983333
+88.618889,53.987778
+88.629444,53.988889
+88.640833,53.982500
+88.631111,54.000278
+88.623333,54.005278
+88.624444,54.009722
+88.638889,54.015278
+88.638333,54.004444
+88.643056,54.004167
+88.642500,54.001944
+88.638889,53.999444
+88.646944,53.980556
+88.666944,53.976944
+88.665833,53.983889
+88.658056,53.997222
+88.663611,53.998056
+88.671944,53.984722
+88.673056,53.977778
+88.677500,53.975833
+88.681111,53.977500
+
+
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+</Placemark>
+
+
+
+</Document>
+</kml>
